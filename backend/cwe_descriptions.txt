@@ -1,0 +1,939 @@
+CWE--1: Unknown or Undetermined Weakness
+CWE-5: J2EE Misconfiguration: Data Transmission Without Encryption
+CWE-6: J2EE Misconfiguration: Insufficient Session-ID Length 
+CWE-7: J2EE Misconfiguration: Missing Custom Error Page
+CWE-8: J2EE Misconfiguration: Entity Bean Declared Remote 
+CWE-9: J2EE Misconfiguration: Weak Access Permissions for EJB Methods
+CWE-11: ASPNET Misconfiguration: Creating Debug Binary
+CWE-12: ASPNET Misconfiguration: Missing Custom Error Page 1
+CWE-13: ASPNET Misconfiguration: Password in Configuration File 1
+CWE-14: Compiler Removal of Code to Clear Buffers1
+CWE-15: External Control of System or Configuration Setting1
+CWE-20: Improper Input Validation2
+CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')3
+CWE-23: Relative Path Traversal 4
+CWE-24: Path Traversal: '/filedir' 5
+CWE-25: Path Traversal: '//filedir' 5
+CWE-26: Path Traversal: '/dir//filename'5
+CWE-27: Path Traversal: 'dir///filename'5
+CWE-28: Path Traversal: '\filedir' 5
+CWE-29: Path Traversal: '\\filename' 6
+CWE-30: Path Traversal: '\dir\\filename'6
+CWE-31: Path Traversal: 'dir\\\filename'6
+CWE-32: Path Traversal: '' (Triple Dot)6
+CWE-33: Path Traversal: '' (Multiple Dot) 6
+CWE-34: Path Traversal: '//'7
+CWE-35: Path Traversal: '///'7
+CWE-36: Absolute Path Traversal 7
+CWE-37: Path Traversal: '/absolute/pathname/here' 7
+CWE-38: Path Traversal: '\absolute\pathname\here' 8
+CWE-39: Path Traversal: 'C:dirname' 8
+CWE-40: Path Traversal: '\\UNC\share\name\' (Windows UNC Share) 8
+CWE-41: Improper Resolution of Path Equivalence 8
+CWE-42: Path Equivalence: 'filename' (Trailing Dot) 9
+CWE-43: Path Equivalence: 'filename' (Multiple Trailing Dot)9
+CWE-44: Path Equivalence: 'filename' (Internal Dot)9
+CWE-45: Path Equivalence: 'filename' (Multiple Internal Dot) 9
+CWE-46: Path Equivalence: 'filename ' (Trailing Space) 9
+CWE-47: Path Equivalence: ' filename' (Leading Space) 9
+CWE-48: Path Equivalence: 'file name' (Internal Whitespace)9
+CWE-49: Path Equivalence: 'filename/' (Trailing Slash)9
+CWE-50: Path Equivalence: '//multiple/leading/slash' 10
+CWE-51: Path Equivalence: '/multiple//internal/slash' 10
+CWE-52: Path Equivalence: '/multiple/trailing/slash//' 10
+CWE-53: Path Equivalence: '\multiple\\internal\backslash'10
+CWE-54: Path Equivalence: 'filedir\' (Trailing Backslash) 10
+CWE-55: Path Equivalence: '//' (Single Dot Directory)10
+CWE-56: Path Equivalence: 'filedir*' (Wildcard) 10
+CWE-57: Path Equivalence: 'fakedir//realdir/filename' 10
+CWE-58: Path Equivalence: Windows 83 Filename 11
+CWE-59: Improper Link Resolution Before File Access ('Link Following') 11
+CWE-61: UNIX Symbolic Link (Symlink) Following11
+CWE-62: UNIX Hard Link11
+CWE-64: Windows Shortcut Following (LNK) 12
+CWE-65: Windows Hard Link12
+CWE-66: Improper Handling of File Names that Identify Virtual Resources12
+CWE-67: Improper Handling of Windows Device Names12
+CWE-69: Improper Handling of Windows ::DATA Alternate Data Stream 12
+CWE-72: Improper Handling of Apple HFS+ Alternate Data Stream Path 13
+CWE-73: External Control of File Name or Path 13
+CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') 13
+CWE-75: Failure to Sanitize Special Elements into a Different Plane (Special Element Injection) 14
+CWE-76: Improper Neutralization of Equivalent Special Elements14
+CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection') 14
+CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') 15
+CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')16
+CWE-80: Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) 17
+CWE-81: Improper Neutralization of Script in an Error Message Web Page17
+CWE-82: Improper Neutralization of Script in Attributes of IMG Tags in a Web Page18
+CWE-83: Improper Neutralization of Script in Attributes in a Web Page 18
+CWE-84: Improper Neutralization of Encoded URI Schemes in a Web Page 18
+CWE-85: Doubled Character XSS Manipulations 18
+CWE-86: Improper Neutralization of Invalid Characters in Identifiers in Web Pages19
+CWE-87: Improper Neutralization of Alternate XSS Syntax19
+CWE-88: Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') 19
+CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') 20
+CWE-90: Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')21
+CWE-91: XML Injection (aka Blind XPath Injection) 21
+CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection') 21
+CWE-94: Improper Control of Generation of Code ('Code Injection') 21
+CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') 22
+CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection') 23
+CWE-97: Improper Neutralization of Server-Side Includes (SSI) Within a Web Page 23
+CWE-98: Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote FileInclusion') 23
+CWE-99: Improper Control of Resource Identifiers ('Resource Injection') 24
+CWE-102: Struts: Duplicate Validation Forms 24
+CWE-103: Struts: Incomplete validate() Method Definition24
+CWE-104: Struts: Form Bean Does Not Extend Validation Class 25
+CWE-105: Struts: Form Field Without Validator 25
+CWE-106: Struts: Plug-in Framework not in Use 25
+CWE-107: Struts: Unused Validation Form25
+CWE-108: Struts: Unvalidated Action Form26
+CWE-109: Struts: Validator Turned Off26
+CWE-110: Struts: Validator Without Form Field 26
+CWE-111: Direct Use of Unsafe JNI26
+CWE-112: Missing XML Validation 26
+CWE-113: Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')27
+CWE-114: Process Control 27
+CWE-115: Misinterpretation of Input 28
+CWE-116: Improper Encoding or Escaping of Output 28
+CWE-117: Improper Output Neutralization for Logs 28
+CWE-118: Incorrect Access of Indexable Resource ('Range Error')29
+CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer29
+CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') 30
+CWE-121: Stack-based Buffer Overflow 31
+CWE-122: Heap-based Buffer Overflow 31
+CWE-123: Write-what-where Condition32
+CWE-124: Buffer Underwrite ('Buffer Underflow') 32
+CWE-125: Out-of-bounds Read33
+CWE-126: Buffer Over-read 33
+CWE-127: Buffer Under-read 33
+CWE-128: Wrap-around Error 33
+CWE-129: Improper Validation of Array Index34
+CWE-130: Improper Handling of Length Parameter Inconsistency35
+CWE-131: Incorrect Calculation of Buffer Size 35
+CWE-134: Use of Externally-Controlled Format String 36
+CWE-135: Incorrect Calculation of Multi-Byte String Length 37
+CWE-138: Improper Neutralization of Special Elements 37
+CWE-140: Improper Neutralization of Delimiters 37
+CWE-141: Improper Neutralization of Parameter/Argument Delimiters 37
+CWE-142: Improper Neutralization of Value Delimiters 38
+CWE-143: Improper Neutralization of Record Delimiters38
+CWE-144: Improper Neutralization of Line Delimiters 38
+CWE-145: Improper Neutralization of Section Delimiters 38
+CWE-146: Improper Neutralization of Expression/Command Delimiters 38
+CWE-147: Improper Neutralization of Input Terminators 38
+CWE-148: Improper Neutralization of Input Leaders 39
+CWE-149: Improper Neutralization of Quoting Syntax39
+CWE-150: Improper Neutralization of Escape, Meta, or Control Sequences39
+CWE-151: Improper Neutralization of Comment Delimiters39
+CWE-152: Improper Neutralization of Macro Symbols 39
+CWE-153: Improper Neutralization of Substitution Characters 40
+CWE-154: Improper Neutralization of Variable Name Delimiters 40
+CWE-155: Improper Neutralization of Wildcards or Matching Symbols40
+CWE-156: Improper Neutralization of Whitespace40
+CWE-157: Failure to Sanitize Paired Delimiters 40
+CWE-158: Improper Neutralization of Null Byte or NUL Character 40
+CWE-159: Improper Handling of Invalid Use of Special Elements 41
+CWE-160: Improper Neutralization of Leading Special Elements41
+CWE-161: Improper Neutralization of Multiple Leading Special Elements 41
+CWE-162: Improper Neutralization of Trailing Special Elements41
+CWE-163: Improper Neutralization of Multiple Trailing Special Elements 41
+CWE-164: Improper Neutralization of Internal Special Elements 42
+CWE-165: Improper Neutralization of Multiple Internal Special Elements 42
+CWE-166: Improper Handling of Missing Special Element42
+CWE-167: Improper Handling of Additional Special Element 42
+CWE-168: Improper Handling of Inconsistent Special Elements 42
+CWE-170: Improper Null Termination 42
+CWE-172: Encoding Error 43
+CWE-173: Improper Handling of Alternate Encoding43
+CWE-174: Double Decoding of the Same Data43
+CWE-175: Improper Handling of Mixed Encoding 43
+CWE-176: Improper Handling of Unicode Encoding44
+CWE-177: Improper Handling of URL Encoding (Hex Encoding)44
+CWE-178: Improper Handling of Case Sensitivity 44
+CWE-179: Incorrect Behavior Order: Early Validation 44
+CWE-180: Incorrect Behavior Order: Validate Before Canonicalize 45
+CWE-181: Incorrect Behavior Order: Validate Before Filter45
+CWE-182: Collapse of Data into Unsafe Value 45
+CWE-183: Permissive List of Allowed Inputs45
+CWE-184: Incomplete List of Disallowed Inputs 45
+CWE-185: Incorrect Regular Expression46
+CWE-186: Overly Restrictive Regular Expression 46
+CWE-187: Partial String Comparison46
+CWE-188: Reliance on Data/Memory Layout 47
+CWE-190: Integer Overflow or Wraparound 47
+CWE-191: Integer Underflow (Wrap or Wraparound) 48
+CWE-192: Integer Coercion Error 48
+CWE-193: Off-by-one Error 48
+CWE-194: Unexpected Sign Extension49
+CWE-195: Signed to Unsigned Conversion Error49
+CWE-196: Unsigned to Signed Conversion Error49
+CWE-197: Numeric Truncation Error 50
+CWE-198: Use of Incorrect Byte Ordering50
+CWE-200: Exposure of Sensitive Information to an Unauthorized Actor50
+CWE-201: Insertion of Sensitive Information Into Sent Data51
+CWE-202: Exposure of Sensitive Information Through Data Queries 51
+CWE-203: Observable Discrepancy51
+CWE-204: Observable Response Discrepancy52
+CWE-205: Observable Behavioral Discrepancy52
+CWE-206: Observable Internal Behavioral Discrepancy52
+CWE-207: Observable Behavioral Discrepancy With Equivalent Products52
+CWE-208: Observable Timing Discrepancy52
+CWE-209: Generation of Error Message Containing Sensitive Information53
+CWE-210: Self-generated Error Message Containing Sensitive Information53
+CWE-211: Externally-Generated Error Message Containing Sensitive Information54
+CWE-212: Improper Removal of Sensitive Information Before Storage or Transfer54
+CWE-213: Exposure of Sensitive Information Due to Incompatible Policies 54
+CWE-214: Invocation of Process Using Visible Sensitive Information54
+CWE-215: Insertion of Sensitive Information Into Debugging Code 55
+CWE-219: Storage of File with Sensitive Data Under Web Root 55
+CWE-220: Storage of File With Sensitive Data Under FTP Root 55
+CWE-221: Information Loss or Omission55
+CWE-222: Truncation of Security-relevant Information55
+CWE-223: Omission of Security-relevant Information55
+CWE-224: Obscured Security-relevant Information by Alternate Name 56
+CWE-226: Sensitive Information in Resource Not Removed Before Reuse56
+CWE-228: Improper Handling of Syntactically Invalid Structure 56
+CWE-229: Improper Handling of Values57
+CWE-230: Improper Handling of Missing Values57
+CWE-231: Improper Handling of Extra Values 57
+CWE-232: Improper Handling of Undefined Values57
+CWE-233: Improper Handling of Parameters 57
+CWE-234: Failure to Handle Missing Parameter 57
+CWE-235: Improper Handling of Extra Parameters57
+CWE-236: Improper Handling of Undefined Parameters 57
+CWE-237: Improper Handling of Structural Elements58
+CWE-238: Improper Handling of Incomplete Structural Elements 58
+CWE-239: Failure to Handle Incomplete Element 58
+CWE-240: Improper Handling of Inconsistent Structural Elements58
+CWE-241: Improper Handling of Unexpected Data Type 58
+CWE-242: Use of Inherently Dangerous Function58
+CWE-243: Creation of chroot Jail Without Changing Working Directory 58
+CWE-244: Improper Clearing of Heap Memory Before Release ('Heap Inspection')59
+CWE-245: J2EE Bad Practices: Direct Management of Connections 59
+CWE-246: J2EE Bad Practices: Direct Use of Sockets59
+CWE-248: Uncaught Exception59
+CWE-250: Execution with Unnecessary Privileges59
+CWE-252: Unchecked Return Value60
+CWE-253: Incorrect Check of Function Return Value 61
+CWE-256: Plaintext Storage of a Password 61
+CWE-257: Storing Passwords in a Recoverable Format 61
+CWE-258: Empty Password in Configuration File62
+CWE-259: Use of Hard-coded Password62
+CWE-260: Password in Configuration File62
+CWE-261: Weak Encoding for Password 63
+CWE-262: Not Using Password Aging63
+CWE-263: Password Aging with Long Expiration 63
+CWE-266: Incorrect Privilege Assignment 63
+CWE-267: Privilege Defined With Unsafe Actions64
+CWE-268: Privilege Chaining 64
+CWE-269: Improper Privilege Management64
+CWE-270: Privilege Context Switching Error 65
+CWE-271: Privilege Dropping / Lowering Errors65
+CWE-272: Least Privilege Violation 65
+CWE-273: Improper Check for Dropped Privileges 66
+CWE-274: Improper Handling of Insufficient Privileges 66
+CWE-276: Incorrect Default Permissions66
+CWE-277: Insecure Inherited Permissions66
+CWE-278: Insecure Preserved Inherited Permissions 66
+CWE-279: Incorrect Execution-Assigned Permissions67
+CWE-280: Improper Handling of Insufficient Permissions or Privileges  67
+CWE-281: Improper Preservation of Permissions67
+CWE-282: Improper Ownership Management 67
+CWE-283: Unverified Ownership67
+CWE-284: Improper Access Control 68
+CWE-285: Improper Authorization68
+CWE-286: Incorrect User Management 69
+CWE-287: Improper Authentication69
+CWE-288: Authentication Bypass Using an Alternate Path or Channel 70
+CWE-289: Authentication Bypass by Alternate Name 70
+CWE-290: Authentication Bypass by Spoofing 70
+CWE-291: Reliance on IP Address for Authentication70
+CWE-293: Using Referer Field for Authentication71
+CWE-294: Authentication Bypass by Capture-replay71
+CWE-295: Improper Certificate Validation71
+CWE-296: Improper Following of a Certificate's Chain of Trust 71
+CWE-297: Improper Validation of Certificate with Host Mismatch72
+CWE-298: Improper Validation of Certificate Expiration 72
+CWE-299: Improper Check for Certificate Revocation72
+CWE-300: Channel Accessible by Non-Endpoint 73
+CWE-301: Reflection Attack in an Authentication Protocol73
+CWE-302: Authentication Bypass by Assumed-Immutable Data73
+CWE-303: Incorrect Implementation of Authentication Algorithm 73
+CWE-304: Missing Critical Step in Authentication 73
+CWE-305: Authentication Bypass by Primary Weakness 74
+CWE-306: Missing Authentication for Critical Function74
+CWE-307: Improper Restriction of Excessive Authentication Attempts 74
+CWE-308: Use of Single-factor Authentication 75
+CWE-309: Use of Password System for Primary Authentication75
+CWE-311: Missing Encryption of Sensitive Data 75
+CWE-312: Cleartext Storage of Sensitive Information 76
+CWE-313: Cleartext Storage in a File or on Disk77
+CWE-314: Cleartext Storage in the Registry 77
+CWE-315: Cleartext Storage of Sensitive Information in a Cookie77
+CWE-316: Cleartext Storage of Sensitive Information in Memory 77
+CWE-317: Cleartext Storage of Sensitive Information in GUI77
+CWE-318: Cleartext Storage of Sensitive Information in Executable 77
+CWE-319: Cleartext Transmission of Sensitive Information 77
+CWE-321: Use of Hard-coded Cryptographic Key78
+CWE-322: Key Exchange without Entity Authentication 78
+CWE-323: Reusing a Nonce, Key Pair in Encryption 79
+CWE-324: Use of a Key Past its Expiration Date79
+CWE-325: Missing Cryptographic Step79
+CWE-326: Inadequate Encryption Strength 79
+CWE-327: Use of a Broken or Risky Cryptographic Algorithm79
+CWE-328: Use of Weak Hash 80
+CWE-329: Generation of Predictable IV with CBC Mode 81
+CWE-330: Use of Insufficiently Random Values81
+CWE-331: Insufficient Entropy 82
+CWE-332: Insufficient Entropy in PRNG82
+CWE-333: Improper Handling of Insufficient Entropy in TRNG 82
+CWE-334: Small Space of Random Values82
+CWE-335: Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)82
+CWE-336: Same Seed in Pseudo-Random Number Generator (PRNG) 83
+CWE-337: Predictable Seed in Pseudo-Random Number Generator (PRNG)83
+CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG) 83
+CWE-339: Small Seed Space in PRNG 84
+CWE-340: Generation of Predictable Numbers or Identifiers 84
+CWE-341: Predictable from Observable State84
+CWE-342: Predictable Exact Value from Previous Values 84
+CWE-343: Predictable Value Range from Previous Values84
+CWE-344: Use of Invariant Value in Dynamically Changing Context 84
+CWE-345: Insufficient Verification of Data Authenticity 85
+CWE-346: Origin Validation Error 85
+CWE-347: Improper Verification of Cryptographic Signature85
+CWE-348: Use of Less Trusted Source85
+CWE-349: Acceptance of Extraneous Untrusted Data With Trusted Data 86
+CWE-350: Reliance on Reverse DNS Resolution for a Security-Critical Action 86
+CWE-351: Insufficient Type Distinction 86
+CWE-352: Cross-Site Request Forgery (CSRF)86
+CWE-353: Missing Support for Integrity Check 87
+CWE-354: Improper Validation of Integrity Check Value 87
+CWE-356: Product UI does not Warn User of Unsafe Actions87
+CWE-357: Insufficient UI Warning of Dangerous Operations 88
+CWE-358: Improperly Implemented Security Check for Standard88
+CWE-359: Exposure of Private Personal Information to an Unauthorized Actor 88
+CWE-360: Trust of System Event Data 88
+CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') 88
+CWE-363: Race Condition Enabling Link Following 89
+CWE-364: Signal Handler Race Condition 89
+CWE-366: Race Condition within a Thread 90
+CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition90
+CWE-368: Context Switching Race Condition 91
+CWE-369: Divide By Zero 91
+CWE-370: Missing Check for Certificate Revocation after Initial Check91
+CWE-372: Incomplete Internal State Distinction 91
+CWE-374: Passing Mutable Objects to an Untrusted Method92
+CWE-375: Returning a Mutable Object to an Untrusted Caller 92
+CWE-377: Insecure Temporary File92
+CWE-378: Creation of Temporary File With Insecure Permissions 92
+CWE-379: Creation of Temporary File in Directory with Insecure Permissions93
+CWE-382: J2EE Bad Practices: Use of Systemexit() 93
+CWE-383: J2EE Bad Practices: Direct Use of Threads 93
+CWE-384: Session Fixation93
+CWE-385: Covert Timing Channel 94
+CWE-386: Symbolic Name not Mapping to Correct Object 94
+CWE-390: Detection of Error Condition Without Action94
+CWE-391: Unchecked Error Condition94
+CWE-392: Missing Report of Error Condition 95
+CWE-393: Return of Wrong Status Code 95
+CWE-394: Unexpected Status Code or Return Value 95
+CWE-395: Use of NullPointerException Catch to Detect NULL Pointer Dereference95
+CWE-396: Declaration of Catch for Generic Exception 95
+CWE-397: Declaration of Throws for Generic Exception96
+CWE-400: Uncontrolled Resource Consumption 96
+CWE-401: Missing Release of Memory after Effective Lifetime 97
+CWE-402: Transmission of Private Resources into a New Sphere ('Resource Leak') 97
+CWE-403: Exposure of File Descriptor to Unintended Control Sphere ('File Descriptor Leak') 97
+CWE-404: Improper Resource Shutdown or Release 98
+CWE-405: Asymmetric Resource Consumption (Amplification)98
+CWE-406: Insufficient Control of Network Message Volume (Network Amplification) 99
+CWE-407: Inefficient Algorithmic Complexity99
+CWE-408: Incorrect Behavior Order: Early Amplification99
+CWE-409: Improper Handling of Highly Compressed Data (Data Amplification)99
+CWE-410: Insufficient Resource Pool 99
+CWE-412: Unrestricted Externally Accessible Lock100
+CWE-413: Improper Resource Locking100
+CWE-414: Missing Lock Check100
+CWE-415: Double Free 100
+CWE-416: Use After Free 101
+CWE-419: Unprotected Primary Channel101
+CWE-420: Unprotected Alternate Channel101
+CWE-421: Race Condition During Access to Alternate Channel102
+CWE-422: Unprotected Windows Messaging Channel ('Shatter')102
+CWE-424: Improper Protection of Alternate Path 102
+CWE-425: Direct Request ('Forced Browsing') 102
+CWE-426: Untrusted Search Path 102
+CWE-427: Uncontrolled Search Path Element103
+CWE-428: Unquoted Search Path or Element103
+CWE-430: Deployment of Wrong Handler 104
+CWE-431: Missing Handler 104
+CWE-432: Dangerous Signal Handler not Disabled During Sensitive Operations104
+CWE-433: Unparsed Raw Web Content Delivery104
+CWE-434: Unrestricted Upload of File with Dangerous Type104
+CWE-435: Improper Interaction Between Multiple Correctly-Behaving Entities 105
+CWE-436: Interpretation Conflict105
+CWE-437: Incomplete Model of Endpoint Features105
+CWE-439: Behavioral Change in New Version or Environment 106
+CWE-440: Expected Behavior Violation106
+CWE-441: Unintended Proxy or Intermediary ('Confused Deputy') 106
+CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')106
+CWE-446: UI Discrepancy for Security Feature107
+CWE-447: Unimplemented or Unsupported Feature in UI107
+CWE-448: Obsolete Feature in UI 107
+CWE-449: The UI Performs the Wrong Action 107
+CWE-450: Multiple Interpretations of UI Input 107
+CWE-451: User Interface (UI) Misrepresentation of Critical Information107
+CWE-453: Insecure Default Variable Initialization108
+CWE-454: External Initialization of Trusted Variables or Data Stores 108
+CWE-455: Non-exit on Failed Initialization108
+CWE-456: Missing Initialization of a Variable 108
+CWE-457: Use of Uninitialized Variable109
+CWE-459: Incomplete Cleanup 109
+CWE-460: Improper Cleanup on Thrown Exception110
+CWE-462: Duplicate Key in Associative List (Alist) 110
+CWE-463: Deletion of Data Structure Sentinel 110
+CWE-464: Addition of Data Structure Sentinel 110
+CWE-466: Return of Pointer Value Outside of Expected Range110
+CWE-467: Use of sizeof() on a Pointer Type 111
+CWE-468: Incorrect Pointer Scaling111
+CWE-469: Use of Pointer Subtraction to Determine Size111
+CWE-470: Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')111
+CWE-471: Modification of Assumed-Immutable Data (MAID)112
+CWE-472: External Control of Assumed-Immutable Web Parameter112
+CWE-473: PHP External Variable Modification112
+CWE-474: Use of Function with Inconsistent Implementations 112
+CWE-475: Undefined Behavior for Input to API113
+CWE-476: NULL Pointer Dereference 113
+CWE-477: Use of Obsolete Function113
+CWE-478: Missing Default Case in Multiple Condition Expression 114
+CWE-479: Signal Handler Use of a Non-reentrant Function 114
+CWE-480: Use of Incorrect Operator115
+CWE-481: Assigning instead of Comparing115
+CWE-482: Comparing instead of Assigning115
+CWE-483: Incorrect Block Delimitation 116
+CWE-484: Omitted Break Statement in Switch116
+CWE-486: Comparison of Classes by Name116
+CWE-487: Reliance on Package-level Scope116
+CWE-488: Exposure of Data Element to Wrong Session116
+CWE-489: Active Debug Code117
+CWE-491: Public cloneable() Method Without Final ('Object Hijack') 117
+CWE-492: Use of Inner Class Containing Sensitive Data 117
+CWE-493: Critical Public Variable Without Final Modifier118
+CWE-494: Download of Code Without Integrity Check118
+CWE-495: Private Data Structure Returned From A Public Method118
+CWE-496: Public Data Assigned to Private Array-Typed Field 119
+CWE-497: Exposure of Sensitive System Information to an Unauthorized Control Sphere119
+CWE-498: Cloneable Class Containing Sensitive Information119
+CWE-499: Serializable Class Containing Sensitive Data119
+CWE-500: Public Static Field Not Marked Final 120
+CWE-501: Trust Boundary Violation 120
+CWE-502: Deserialization of Untrusted Data120
+CWE-506: Embedded Malicious Code121
+CWE-507: Trojan Horse 121
+CWE-508: Non-Replicating Malicious Code121
+CWE-509: Replicating Malicious Code (Virus or Worm)121
+CWE-510: Trapdoor121
+CWE-511: Logic/Time Bomb 121
+CWE-512: Spyware 121
+CWE-514: Covert Channel 121
+CWE-515: Covert Storage Channel 122
+CWE-520: NET Misconfiguration: Use of Impersonation 122
+CWE-521: Weak Password Requirements122
+CWE-522: Insufficiently Protected Credentials122
+CWE-523: Unprotected Transport of Credentials123
+CWE-524: Use of Cache Containing Sensitive Information123
+CWE-525: Use of Web Browser Cache Containing Sensitive Information 123
+CWE-526: Cleartext Storage of Sensitive Information in an Environment Variable 123
+CWE-527: Exposure of Version-Control Repository to an Unauthorized Control Sphere 123
+CWE-528: Exposure of Core Dump File to an Unauthorized Control Sphere123
+CWE-529: Exposure of Access Control List Files to an Unauthorized Control Sphere123
+CWE-530: Exposure of Backup File to an Unauthorized Control Sphere123
+CWE-531: Inclusion of Sensitive Information in Test Code 124
+CWE-532: Insertion of Sensitive Information into Log File 124
+CWE-535: Exposure of Information Through Shell Error Message 124
+CWE-536: Servlet Runtime Error Message Containing Sensitive Information124
+CWE-537: Java Runtime Error Message Containing Sensitive Information 124
+CWE-538: Insertion of Sensitive Information into Externally-Accessible File or Directory 124
+CWE-539: Use of Persistent Cookies Containing Sensitive Information125
+CWE-540: Inclusion of Sensitive Information in Source Code125
+CWE-541: Inclusion of Sensitive Information in an Include File 125
+CWE-543: Use of Singleton Pattern Without Synchronization in a Multithreaded Context 125
+CWE-544: Missing Standardized Error Handling Mechanism125
+CWE-546: Suspicious Comment 125
+CWE-547: Use of Hard-coded, Security-relevant Constants 125
+CWE-548: Exposure of Information Through Directory Listing 126
+CWE-549: Missing Password Field Masking126
+CWE-550: Server-generated Error Message Containing Sensitive Information126
+CWE-551: Incorrect Behavior Order: Authorization Before Parsing and Canonicalization126
+CWE-552: Files or Directories Accessible to External Parties126
+CWE-553: Command Shell in Externally Accessible Directory126
+CWE-554: ASPNET Misconfiguration: Not Using Input Validation Framework126
+CWE-555: J2EE Misconfiguration: Plaintext Password in Configuration File 127
+CWE-556: ASPNET Misconfiguration: Use of Identity Impersonation 127
+CWE-558: Use of getlogin() in Multithreaded Application127
+CWE-560: Use of umask() with chmod-style Argument127
+CWE-561: Dead Code127
+CWE-562: Return of Stack Variable Address 127
+CWE-563: Assignment to Variable without Use128
+CWE-564: SQL Injection: Hibernate128
+CWE-565: Reliance on Cookies without Validation and Integrity Checking128
+CWE-566: Authorization Bypass Through User-Controlled SQL Primary Key128
+CWE-567: Unsynchronized Access to Shared Data in a Multithreaded Context 128
+CWE-568: finalize() Method Without superfinalize() 129
+CWE-570: Expression is Always False 129
+CWE-571: Expression is Always True 129
+CWE-572: Call to Thread run() instead of start()129
+CWE-573: Improper Following of Specification by Caller 129
+CWE-574: EJB Bad Practices: Use of Synchronization Primitives 130
+CWE-575: EJB Bad Practices: Use of AWT Swing 130
+CWE-576: EJB Bad Practices: Use of Java I/O 130
+CWE-577: EJB Bad Practices: Use of Sockets 130
+CWE-578: EJB Bad Practices: Use of Class Loader130
+CWE-579: J2EE Bad Practices: Non-serializable Object Stored in Session130
+CWE-580: clone() Method Without superclone()131
+CWE-581: Object Model Violation: Just One of Equals and Hashcode Defined131
+CWE-582: Array Declared Public, Final, and Static131
+CWE-583: finalize() Method Declared Public131
+CWE-584: Return Inside Finally Block131
+CWE-585: Empty Synchronized Block 131
+CWE-586: Explicit Call to Finalize() 132
+CWE-587: Assignment of a Fixed Address to a Pointer132
+CWE-588: Attempt to Access Child of a Non-structure Pointer132
+CWE-589: Call to Non-ubiquitous API 132
+CWE-590: Free of Memory not on the Heap132
+CWE-591: Sensitive Data Storage in Improperly Locked Memory 132
+CWE-593: Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created133
+CWE-594: J2EE Framework: Saving Unserializable Objects to Disk 133
+CWE-595: Comparison of Object References Instead of Object Contents133
+CWE-597: Use of Wrong Operator in String Comparison133
+CWE-598: Use of GET Request Method With Sensitive Query Strings 134
+CWE-599: Missing Validation of OpenSSL Certificate134
+CWE-600: Uncaught Exception in Servlet  134
+CWE-601: URL Redirection to Untrusted Site ('Open Redirect') 134
+CWE-602: Client-Side Enforcement of Server-Side Security135
+CWE-603: Use of Client-Side Authentication135
+CWE-605: Multiple Binds to the Same Port135
+CWE-606: Unchecked Input for Loop Condition 135
+CWE-607: Public Static Final Field References Mutable Object136
+CWE-608: Struts: Non-private Field in ActionForm Class136
+CWE-609: Double-Checked Locking136
+CWE-610: Externally Controlled Reference to a Resource in Another Sphere136
+CWE-611: Improper Restriction of XML External Entity Reference136
+CWE-612: Improper Authorization of Index Containing Sensitive Information137
+CWE-613: Insufficient Session Expiration137
+CWE-614: Sensitive Cookie in HTTPS Session Without 'Secure' Attribute 137
+CWE-615: Inclusion of Sensitive Information in Source Code Comments137
+CWE-616: Incomplete Identification of Uploaded File Variables (PHP)137
+CWE-617: Reachable Assertion137
+CWE-618: Exposed Unsafe ActiveX Method 138
+CWE-619: Dangling Database Cursor ('Cursor Injection') 138
+CWE-620: Unverified Password Change 138
+CWE-621: Variable Extraction Error138
+CWE-622: Improper Validation of Function Hook Arguments138
+CWE-623: Unsafe ActiveX Control Marked Safe For Scripting 138
+CWE-624: Executable Regular Expression Error139
+CWE-625: Permissive Regular Expression139
+CWE-626: Null Byte Interaction Error (Poison Null Byte) 139
+CWE-627: Dynamic Variable Evaluation139
+CWE-628: Function Call with Incorrectly Specified Arguments 139
+CWE-636: Not Failing Securely ('Failing Open') 140
+CWE-637: Unnecessary Complexity in Protection Mechanism (Not Using 'Economy of Mechanism') 140
+CWE-638: Not Using Complete Mediation140
+CWE-639: Authorization Bypass Through User-Controlled Key 140
+CWE-640: Weak Password Recovery Mechanism for Forgotten Password140
+CWE-641: Improper Restriction of Names for Files and Other Resources141
+CWE-642: External Control of Critical State Data 141
+CWE-643: Improper Neutralization of Data within XPath Expressions ('XPath Injection')141
+CWE-644: Improper Neutralization of HTTP Headers for Scripting Syntax 142
+CWE-645: Overly Restrictive Account Lockout Mechanism142
+CWE-646: Reliance on File Name or Extension of Externally-Supplied File 142
+CWE-647: Use of Non-Canonical URL Paths for Authorization Decisions 142
+CWE-648: Incorrect Use of Privileged APIs142
+CWE-649: Reliance on Obfuscation or Encryption of Security-Relevant Inputs without Integrity Checking 143
+CWE-650: Trusting HTTP Permission Methods on the Server Side143
+CWE-651: Exposure of WSDL File Containing Sensitive Information 143
+CWE-652: Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')143
+CWE-653: Improper Isolation or Compartmentalization143
+CWE-654: Reliance on a Single Factor in a Security Decision 143
+CWE-655: Insufficient Psychological Acceptability144
+CWE-656: Reliance on Security Through Obscurity 144
+CWE-657: Violation of Secure Design Principles144
+CWE-662: Improper Synchronization 144
+CWE-663: Use of a Non-reentrant Function in a Concurrent Context145
+CWE-664: Improper Control of a Resource Through its Lifetime 145
+CWE-665: Improper Initialization145
+CWE-666: Operation on Resource in Wrong Phase of Lifetime146
+CWE-667: Improper Locking 146
+CWE-668: Exposure of Resource to Wrong Sphere146
+CWE-669: Incorrect Resource Transfer Between Spheres147
+CWE-670: Always-Incorrect Control Flow Implementation147
+CWE-671: Lack of Administrator Control over Security 147
+CWE-672: Operation on a Resource after Expiration or Release147
+CWE-673: External Influence of Sphere Definition 148
+CWE-674: Uncontrolled Recursion148
+CWE-675: Multiple Operations on Resource in Single-Operation Context 148
+CWE-676: Use of Potentially Dangerous Function 148
+CWE-680: Integer Overflow to Buffer Overflow 149
+CWE-681: Incorrect Conversion between Numeric Types149
+CWE-682: Incorrect Calculation 149
+CWE-683: Function Call With Incorrect Order of Arguments150
+CWE-684: Incorrect Provision of Specified Functionality150
+CWE-685: Function Call With Incorrect Number of Arguments 150
+CWE-686: Function Call With Incorrect Argument Type150
+CWE-687: Function Call With Incorrectly Specified Argument Value 151
+CWE-688: Function Call With Incorrect Variable or Reference as Argument 151
+CWE-689: Permission Race Condition During Resource Copy151
+CWE-690: Unchecked Return Value to NULL Pointer Dereference 151
+CWE-691: Insufficient Control Flow Management 151
+CWE-692: Incomplete Denylist to Cross-Site Scripting 151
+CWE-693: Protection Mechanism Failure 152
+CWE-694: Use of Multiple Resources with Duplicate Identifier 152
+CWE-695: Use of Low-Level Functionality152
+CWE-696: Incorrect Behavior Order 152
+CWE-697: Incorrect Comparison153
+CWE-698: Execution After Redirect (EAR) 153
+CWE-703: Improper Check or Handling of Exceptional Conditions153
+CWE-704: Incorrect Type Conversion or Cast153
+CWE-705: Incorrect Control Flow Scoping 154
+CWE-706: Use of Incorrectly-Resolved Name or Reference154
+CWE-707: Improper Neutralization154
+CWE-708: Incorrect Ownership Assignment154
+CWE-710: Improper Adherence to Coding Standards 154
+CWE-732: Incorrect Permission Assignment for Critical Resource155
+CWE-733: Compiler Optimization Removal or Modification of Security-critical Code 156
+CWE-749: Exposed Dangerous Method or Function 156
+CWE-754: Improper Check for Unusual or Exceptional Conditions156
+CWE-755: Improper Handling of Exceptional Conditions157
+CWE-756: Missing Custom Error Page157
+CWE-757: Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')158
+CWE-758: Reliance on Undefined, Unspecified, or Implementation-Defined Behavior 158
+CWE-759: Use of a One-Way Hash without a Salt 158
+CWE-760: Use of a One-Way Hash with a Predictable Salt 158
+CWE-761: Free of Pointer not at Start of Buffer159
+CWE-762: Mismatched Memory Management Routines 159
+CWE-763: Release of Invalid Pointer or Reference159
+CWE-764: Multiple Locks of a Critical Resource 160
+CWE-765: Multiple Unlocks of a Critical Resource160
+CWE-766: Critical Data Element Declared Public160
+CWE-767: Access to Critical Private Variable via Public Method161
+CWE-768: Incorrect Short Circuit Evaluation 161
+CWE-770: Allocation of Resources Without Limits or Throttling161
+CWE-771: Missing Reference to Active Allocated Resource162
+CWE-772: Missing Release of Resource after Effective Lifetime 162
+CWE-773: Missing Reference to Active File Descriptor or Handle 162
+CWE-774: Allocation of File Descriptors or Handles Without Limits or Throttling163
+CWE-775: Missing Release of File Descriptor or Handle after Effective Lifetime163
+CWE-776: Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')163
+CWE-777: Regular Expression without Anchors163
+CWE-778: Insufficient Logging 163
+CWE-779: Logging of Excessive Data164
+CWE-780: Use of RSA Algorithm without OAEP164
+CWE-781: Improper Address Validation in IOCTL with METHOD_NEITHER I/O Control Code164
+CWE-782: Exposed IOCTL with Insufficient Access Control 164
+CWE-783: Operator Precedence Logic Error165
+CWE-784: Reliance on Cookies without Validation and Integrity Checking in a Security Decision165
+CWE-785: Use of Path Manipulation Function without Maximum-sized Buffer165
+CWE-786: Access of Memory Location Before Start of Buffer 165
+CWE-787: Out-of-bounds Write166
+CWE-788: Access of Memory Location After End of Buffer 166
+CWE-789: Memory Allocation with Excessive Size Value 167
+CWE-790: Improper Filtering of Special Elements167
+CWE-791: Incomplete Filtering of Special Elements 168
+CWE-792: Incomplete Filtering of One or More Instances of Special Elements168
+CWE-793: Only Filtering One Instance of a Special Element168
+CWE-794: Incomplete Filtering of Multiple Instances of Special Elements168
+CWE-795: Only Filtering Special Elements at a Specified Location 168
+CWE-796: Only Filtering Special Elements Relative to a Marker 168
+CWE-797: Only Filtering Special Elements at an Absolute Position168
+CWE-798: Use of Hard-coded Credentials 169
+CWE-799: Improper Control of Interaction Frequency169
+CWE-804: Guessable CAPTCHA170
+CWE-805: Buffer Access with Incorrect Length Value170
+CWE-806: Buffer Access Using Size of Source Buffer171
+CWE-807: Reliance on Untrusted Inputs in a Security Decision 171
+CWE-820: Missing Synchronization 172
+CWE-821: Incorrect Synchronization172
+CWE-822: Untrusted Pointer Dereference 172
+CWE-823: Use of Out-of-range Pointer Offset172
+CWE-824: Access of Uninitialized Pointer 172
+CWE-825: Expired Pointer Dereference173
+CWE-826: Premature Release of Resource During Expected Lifetime 173
+CWE-827: Improper Control of Document Type Definition 173
+CWE-828: Signal Handler with Functionality that is not Asynchronous-Safe173
+CWE-829: Inclusion of Functionality from Untrusted Control Sphere 174
+CWE-830: Inclusion of Web Functionality from an Untrusted Source174
+CWE-831: Signal Handler Function Associated with Multiple Signals 174
+CWE-832: Unlock of a Resource that is not Locked 175
+CWE-833: Deadlock 175
+CWE-834: Excessive Iteration175
+CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop') 175
+CWE-836: Use of Password Hash Instead of Password for Authentication 176
+CWE-837: Improper Enforcement of a Single, Unique Action 176
+CWE-838: Inappropriate Encoding for Output Context 176
+CWE-839: Numeric Range Comparison Without Minimum Check 176
+CWE-841: Improper Enforcement of Behavioral Workflow 177
+CWE-842: Placement of User into Incorrect Group177
+CWE-843: Access of Resource Using Incompatible Type ('Type Confusion') 177
+CWE-862: Missing Authorization178
+CWE-863: Incorrect Authorization 178
+CWE-908: Use of Uninitialized Resource 179
+CWE-909: Missing Initialization of Resource 179
+CWE-910: Use of Expired File Descriptor180
+CWE-911: Improper Update of Reference Count 180
+CWE-912: Hidden Functionality180
+CWE-913: Improper Control of Dynamically-Managed Code Resources180
+CWE-914: Improper Control of Dynamically-Identified Variables180
+CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes 180
+CWE-916: Use of Password Hash With Insufficient Computational Effort181
+CWE-917: Improper Neutralization of Special Elements used in an Expression Language Statement('Expression Language Injection')181
+CWE-918: Server-Side Request Forgery (SSRF)182
+CWE-920: Improper Restriction of Power Consumption182
+CWE-921: Storage of Sensitive Data in a Mechanism without Access Control 182
+CWE-922: Insecure Storage of Sensitive Information182
+CWE-923: Improper Restriction of Communication Channel to Intended Endpoints 182
+CWE-924: Improper Enforcement of Message Integrity During Transmission in a Communication Channel 183
+CWE-925: Improper Verification of Intent by Broadcast Receiver 183
+CWE-926: Improper Export of Android Application Components183
+CWE-927: Use of Implicit Intent for Sensitive Communication 183
+CWE-939: Improper Authorization in Handler for Custom URL Scheme184
+CWE-940: Improper Verification of Source of a Communication Channel184
+CWE-941: Incorrectly Specified Destination in a Communication Channel 184
+CWE-942: Permissive Cross-domain Policy with Untrusted Domains 184
+CWE-943: Improper Neutralization of Special Elements in Data Query Logic185
+CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag 185
+CWE-1007: Insufficient Visual Distinction of Homoglyphs Presented to User 185
+CWE-1021: Improper Restriction of Rendered UI Layers or Frames 186
+CWE-1022: Use of Web Link to Untrusted Target with windowopener Access 186
+CWE-1023: Incomplete Comparison with Missing Factors 186
+CWE-1024: Comparison of Incompatible Types 186
+CWE-1025: Comparison Using Wrong Factors186
+CWE-1037: Processor Optimization Removal or Modification of Security-critical Code 187
+CWE-1038: Insecure Automated Optimizations 187
+CWE-1039: Automated Recognition Mechanism with Inadequate Detection or Handling of Adversarial Input Perturbations187
+CWE-1041: Use of Redundant Code187
+CWE-1042: Static Member Data Element outside of a Singleton Class Element187
+CWE-1043: Data Element Aggregating an Excessively Large Number of Non-Primitive Elements187
+CWE-1044: Architecture with Number of Horizontal Layers Outside of Expected Range187
+CWE-1045: Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor 188
+CWE-1046: Creation of Immutable Text Using String Concatenation 188
+CWE-1047: Modules with Circular Dependencies 188
+CWE-1048: Invokable Control Element with Large Number of Outward Calls 188
+CWE-1049: Excessive Data Query Operations in a Large Data Table188
+CWE-1050: Excessive Platform Resource Consumption within a Loop 188
+CWE-1051: Initialization with Hard-Coded Network Resource Configuration Data188
+CWE-1052: Excessive Use of Hard-Coded Literals in Initialization 188
+CWE-1053: Missing Documentation for Design188
+CWE-1054: Invocation of a Control Element at an Unnecessarily Deep Horizontal Layer 188
+CWE-1055: Multiple Inheritance from Concrete Classes189
+CWE-1056: Invokable Control Element with Variadic Parameters189
+CWE-1057: Data Access Operations Outside of Expected Data Manager Component 189
+CWE-1058: Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element 189
+CWE-1059: Insufficient Technical Documentation 189
+CWE-1060: Excessive Number of Inefficient Server-Side Data Accesses 189
+CWE-1061: Insufficient Encapsulation 189
+CWE-1062: Parent Class with References to Child Class190
+CWE-1063: Creation of Class Instance within a Static Code Block 190
+CWE-1064: Invokable Control Element with Signature Containing an Excessive Number of Parameters190
+CWE-1065: Runtime Resource Management Control Element in a Component Built to Run on Application Servers190
+CWE-1066: Missing Serialization Control Element 190
+CWE-1067: Excessive Execution of Sequential Searches of Data Resource190
+CWE-1068: Inconsistency Between Implementation and Documented Design 190
+CWE-1069: Empty Exception Block 190
+CWE-1070: Serializable Data Element Containing non-Serializable Item Elements190
+CWE-1071: Empty Code Block 191
+CWE-1072: Data Resource Access without Use of Connection Pooling 191
+CWE-1073: Non-SQL Invokable Control Element with Excessive Number of Data Resource Accesses191
+CWE-1074: Class with Excessively Deep Inheritance 191
+CWE-1075: Unconditional Control Flow Transfer outside of Switch Block 191
+CWE-1076: Insufficient Adherence to Expected Conventions 191
+CWE-1077: Floating Point Comparison with Incorrect Operator191
+CWE-1078: Inappropriate Source Code Style or Formatting191
+CWE-1079: Parent Class without Virtual Destructor Method191
+CWE-1080: Source Code File with Excessive Number of Lines of Code192
+CWE-1082: Class Instance Self Destruction Control Element192
+CWE-1083: Data Access from Outside Expected Data Manager Component192
+CWE-1084: Invokable Control Element with Excessive File or Data Access Operations 192
+CWE-1085: Invokable Control Element with Excessive Volume of Commented-out Code192
+CWE-1086: Class with Excessive Number of Child Classes 192
+CWE-1087: Class with Virtual Method without a Virtual Destructor192
+CWE-1088: Synchronous Access of Remote Resource without Timeout192
+CWE-1089: Large Data Table with Excessive Number of Indices192
+CWE-1090: Method Containing Access of a Member Element from Another Class193
+CWE-1091: Use of Object without Invoking Destructor Method 193
+CWE-1092: Use of Same Invokable Control Element in Multiple Architectural Layers193
+CWE-1093: Excessively Complex Data Representation193
+CWE-1094: Excessive Index Range Scan for a Data Resource 193
+CWE-1095: Loop Condition Value Update within the Loop 193
+CWE-1096: Singleton Class Instance Creation without Proper Locking or Synchronization193
+CWE-1097: Persistent Storable Data Element without Associated Comparison Control Element 193
+CWE-1098: Data Element containing Pointer Item without Proper Copy Control Element 193
+CWE-1099: Inconsistent Naming Conventions for Identifiers 193
+CWE-1100: Insufficient Isolation of System-Dependent Functions194
+CWE-1101: Reliance on Runtime Component in Generated Code 194
+CWE-1102: Reliance on Machine-Dependent Data Representation194
+CWE-1103: Use of Platform-Dependent Third Party Components 194
+CWE-1104: Use of Unmaintained Third Party Components194
+CWE-1105: Insufficient Encapsulation of Machine-Dependent Functionality194
+CWE-1106: Insufficient Use of Symbolic Constants 194
+CWE-1107: Insufficient Isolation of Symbolic Constant Definitions 194
+CWE-1108: Excessive Reliance on Global Variables 194
+CWE-1109: Use of Same Variable for Multiple Purposes 194
+CWE-1110: Incomplete Design Documentation 195
+CWE-1111: Incomplete I/O Documentation 195
+CWE-1112: Incomplete Documentation of Program Execution 195
+CWE-1113: Inappropriate Comment Style 195
+CWE-1114: Inappropriate Whitespace Style195
+CWE-1115: Source Code Element without Standard Prologue 195
+CWE-1116: Inaccurate Comments195
+CWE-1117: Callable with Insufficient Behavioral Summary195
+CWE-1118: Insufficient Documentation of Error Handling Techniques195
+CWE-1119: Excessive Use of Unconditional Branching 195
+CWE-1120: Excessive Code Complexity 196
+CWE-1121: Excessive McCabe Cyclomatic Complexity196
+CWE-1122: Excessive Halstead Complexity196
+CWE-1123: Excessive Use of Self-Modifying Code196
+CWE-1124: Excessively Deep Nesting 196
+CWE-1125: Excessive Attack Surface 196
+CWE-1126: Declaration of Variable with Unnecessarily Wide Scope196
+CWE-1127: Compilation with Insufficient Warnings or Errors196
+CWE-1164: Irrelevant Code 196
+CWE-1173: Improper Use of Validation Framework 196
+CWE-1174: ASPNET Misconfiguration: Improper Model Validation 197
+CWE-1176: Inefficient CPU Computation197
+CWE-1177: Use of Prohibited Code 197
+CWE-1188: Initialization of a Resource with an Insecure Default197
+CWE-1189: Improper Isolation of Shared Resources on System-on-a-Chip (SoC)197
+CWE-1190: DMA Device Enabled Too Early in Boot Phase 197
+CWE-1191: On-Chip Debug and Test Interface With Improper Access Control198
+CWE-1192: Improper Identifier for IP Block used in System-On-Chip (SOC)198
+CWE-1193: Power-On of Untrusted Execution Core Before Enabling Fabric Access Control 198
+CWE-1204: Generation of Weak Initialization Vector (IV)198
+CWE-1209: Failure to Disable Reserved Bits 199
+CWE-1220: Insufficient Granularity of Access Control199
+CWE-1221: Incorrect Register Defaults or Module Parameters 199
+CWE-1222: Insufficient Granularity of Address Regions Protected by Register Locks199
+CWE-1223: Race Condition for Write-Once Attributes 200
+CWE-1224: Improper Restriction of Write-Once Bit Fields 200
+CWE-1229: Creation of Emergent Resource 200
+CWE-1230: Exposure of Sensitive Information Through Metadata200
+CWE-1231: Improper Prevention of Lock Bit Modification200
+CWE-1232: Improper Lock Behavior After Power State Transition 201
+CWE-1233: Security-Sensitive Hardware Controls with Missing Lock Bit Protection201
+CWE-1234: Hardware Internal or Debug Modes Allow Override of Locks201
+CWE-1235: Incorrect Use of Autoboxing and Unboxing for Performance Critical Operations 201
+CWE-1236: Improper Neutralization of Formula Elements in a CSV File201
+CWE-1239: Improper Zeroization of Hardware Register202
+CWE-1240: Use of a Cryptographic Primitive with a Risky Implementation 202
+CWE-1241: Use of Predictable Algorithm in Random Number Generator203
+CWE-1242: Inclusion of Undocumented Features or Chicken Bits203
+CWE-1243: Sensitive Non-Volatile Information Not Protected During Debug203
+CWE-1244: Internal Asset Exposed to Unsafe Debug Access Level or State203
+CWE-1245: Improper Finite State Machines (FSMs) in Hardware Logic204
+CWE-1246: Improper Write Handling in Limited-write Non-Volatile Memories 204
+CWE-1247: Improper Protection Against Voltage and Clock Glitches204
+CWE-1248: Semiconductor Defects in Hardware Logic with Security-Sensitive Implications204
+CWE-1249: Application-Level Admin Tool with Inconsistent View of Underlying Operating System205
+CWE-1250: Improper Preservation of Consistency Between Independent Representations of Shared State205
+CWE-1251: Mirrored Regions with Different Values 205
+CWE-1252: CPU Hardware Not Configured to Support Exclusivity of Write and Execute Operations205
+CWE-1253: Incorrect Selection of Fuse Values205
+CWE-1254: Incorrect Comparison Logic Granularity 206
+CWE-1255: Comparison Logic is Vulnerable to Power Side-Channel Attacks 206
+CWE-1256: Improper Restriction of Software Interfaces to Hardware Features206
+CWE-1257: Improper Access Control Applied to Mirrored or Aliased Memory Regions206
+CWE-1258: Exposure of Sensitive System Information Due to Uncleared Debug Information207
+CWE-1259: Improper Restriction of Security Token Assignment207
+CWE-1260: Improper Handling of Overlap Between Protected Memory Ranges207
+CWE-1261: Improper Handling of Single Event Upsets 207
+CWE-1262: Improper Access Control for Register Interface 208
+CWE-1263: Improper Physical Access Control208
+CWE-1264: Hardware Logic with Insecure De-Synchronization between Control and Data Channels208
+CWE-1265: Unintended Reentrant Invocation of Non-reentrant Code Via Nested Calls 208
+CWE-1266: Improper Scrubbing of Sensitive Data from Decommissioned Device 209
+CWE-1267: Policy Uses Obsolete Encoding 209
+CWE-1268: Policy Privileges are not Assigned Consistently Between Control and Data Agents 209
+CWE-1269: Product Released in Non-Release Configuration 209
+CWE-1270: Generation of Incorrect Security Tokens 210
+CWE-1271: Uninitialized Value on Reset for Registers Holding Security Settings 210
+CWE-1272: Sensitive Information Uncleared Before Debug/Power State Transition210
+CWE-1273: Device Unlock Credential Sharing210
+CWE-1274: Improper Access Control for Volatile Memory Containing Boot Code 210
+CWE-1275: Sensitive Cookie with Improper SameSite Attribute 211
+CWE-1276: Hardware Child Block Incorrectly Connected to Parent System211
+CWE-1277: Firmware Not Updateable211
+CWE-1278: Missing Protection Against Hardware Reverse Engineering Using Integrated Circuit (IC) Imaging Techniques211
+CWE-1279: Cryptographic Operations are run Before Supporting Units are Ready212
+CWE-1280: Access Control Check Implemented After Asset is Accessed212
+CWE-1281: Sequence of Processor Instructions Leads to Unexpected Behavior212
+CWE-1282: Assumed-Immutable Data is Stored in Writable Memory212
+CWE-1283: Mutable Attestation or Measurement Reporting Data212
+CWE-1284: Improper Validation of Specified Quantity in Input 213
+CWE-1285: Improper Validation of Specified Index, Position, or Offset in Input 213
+CWE-1286: Improper Validation of Syntactic Correctness of Input 213
+CWE-1287: Improper Validation of Specified Type of Input 213
+CWE-1288: Improper Validation of Consistency within Input213
+CWE-1289: Improper Validation of Unsafe Equivalence in Input214
+CWE-1290: Incorrect Decoding of Security Identifiers 214
+CWE-1291: Public Key Re-Use for Signing both Debug and Production Code214
+CWE-1292: Incorrect Conversion of Security Identifiers214
+CWE-1293: Missing Source Correlation of Multiple Independent Data214
+CWE-1294: Insecure Security Identifier Mechanism215
+CWE-1295: Debug Messages Revealing Unnecessary Information215
+CWE-1296: Incorrect Chaining or Granularity of Debug Components215
+CWE-1297: Unprotected Confidential Information on Device is Accessible by OSAT Vendors215
+CWE-1298: Hardware Logic Contains Race Conditions215
+CWE-1299: Missing Protection Mechanism for Alternate Hardware Interface216
+CWE-1300: Improper Protection of Physical Side Channels 216
+CWE-1301: Insufficient or Incomplete Data Removal within Hardware Component217
+CWE-1302: Missing Source Identifier in Entity Transactions on a System-On-Chip (SOC)217
+CWE-1303: Non-Transparent Sharing of Microarchitectural Resources217
+CWE-1304: Improperly Preserved Integrity of Hardware Configuration State During a Power Save/Restore Operation217
+CWE-1310: Missing Ability to Patch ROM Code 217
+CWE-1311: Improper Translation of Security Attributes by Fabric Bridge 218
+CWE-1312: Missing Protection for Mirrored Regions in On-Chip Fabric Firewall 218
+CWE-1313: Hardware Allows Activation of Test or Debug Logic at Runtime 218
+CWE-1314: Missing Write Protection for Parametric Data Values218
+CWE-1315: Improper Setting of Bus Controlling Capability in Fabric End-point219
+CWE-1316: Fabric-Address Map Allows Programming of Unwarranted Overlaps of Protected and Unprotected Ranges219
+CWE-1317: Improper Access Control in Fabric Bridge219
+CWE-1318: Missing Support for Security Features in On-chip Fabrics or Buses 219
+CWE-1319: Improper Protection against Electromagnetic Fault Injection (EM-FI) 219
+CWE-1320: Improper Protection for Outbound Error Messages and Alert Signals220
+CWE-1321: Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') 220
+CWE-1322: Use of Blocking Code in Single-threaded, Non-blocking Context220
+CWE-1323: Improper Management of Sensitive Trace Data220
+CWE-1325: Improperly Controlled Sequential Memory Allocation221
+CWE-1326: Missing Immutable Root of Trust in Hardware 221
+CWE-1327: Binding to an Unrestricted IP Address 221
+CWE-1328: Security Version Number Mutable to Older Versions221
+CWE-1329: Reliance on Component That is Not Updateable 221
+CWE-1330: Remanent Data Readable after Memory Erase 222
+CWE-1331: Improper Isolation of Shared Resources in Network On Chip (NoC) 222
+CWE-1332: Improper Handling of Faults that Lead to Instruction Skips222
+CWE-1333: Inefficient Regular Expression Complexity 223
+CWE-1334: Unauthorized Error Injection Can Degrade Hardware Redundancy 223
+CWE-1335: Incorrect Bitwise Shift of Integer223
+CWE-1336: Improper Neutralization of Special Elements Used in a Template Engine 223
+CWE-1338: Improper Protections Against Hardware Overheating 224
+CWE-1339: Insufficient Precision or Accuracy of a Real Number 224
+CWE-1341: Multiple Releases of Same Resource or Handle224
+CWE-1342: Information Exposure through Microarchitectural State after Transient Execution 225
+CWE-1351: Improper Handling of Hardware Behavior in Exceptionally Cold Environments 225
+CWE-1357: Reliance on Insufficiently Trustworthy Component225
+CWE-1384: Improper Handling of Physical or Environmental Conditions225
+CWE-1385: Missing Origin Validation in WebSockets 225
+CWE-1386: Insecure Operation on Windows Junction / Mount Point226
+CWE-1389: Incorrect Parsing of Numbers with Different Radices226
+CWE-1390: Weak Authentication 226
+CWE-1391: Use of Weak Credentials226
+CWE-1392: Use of Default Credentials227
+CWE-1393: Use of Default Password227
+CWE-1394: Use of Default Cryptographic Key 227
+CWE-1395: Dependency on Vulnerable Third-Party Component 227
+CWE-1419: Incorrect Initialization of Resource228
+CWE-1420: Exposure of Sensitive Information during Transient Execution 228
+CWE-1421: Exposure of Sensitive Information in Shared Microarchitectural Structures during Transient Execution229
+CWE-1422: Exposure of Sensitive Information caused by Incorrect Data Forwarding during Transient Execution229
+CWE-1423: Exposure of Sensitive Information caused by Shared Microarchitectural Predictor State that Influences Transient Execution230
