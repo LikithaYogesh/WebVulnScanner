@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP ZAP Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OWASP ZAP Scanner</h1>
+        <form id="scanForm">
+            <label for="urlInput">Target URL:</label>
+            <input type="text" id="urlInput" name="urlInput" required>
+            <button type="submit">Scan</button>
+        </form>
+        <div id="result"></div>
+        <button id="fetchResults">Fetch Results</button>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        document.getElementById('scanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const targetUrl = document.getElementById('urlInput').value;
+            const backendUrl = 'http://192.168.1.116:5000/api/scan';  // Update to match your backend URL
+
+            fetch(backendUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ target_url: targetUrl })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    document.getElementById('result').innerText = 'Scan completed successfully';
+                } else if (data.error) {
+                    document.getElementById('result').innerText = `Error: ${data.error}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = 'An error occurred';
+            });
+        });
+
+        document.getElementById('fetchResults').addEventListener('click', function() {
+            const resultsUrl = 'http://192.168.1.116:5000/api/results';  // Update to match your backend URL
+
+            fetch(resultsUrl)
+            .then(response => response.json())
+            .then(data => {
+                const resultsContainer = document.getElementById('results');
+                resultsContainer.innerHTML = '';  // Clear previous results
+
+                data.forEach(result => {
+                    const resultDiv = document.createElement('div');
+                    resultDiv.innerHTML = `
+                        <h3>${result.alert}</h3>
+                        <p><strong>Solution:</strong> ${result.solution}</p>
+                        <p><strong>Risk:</strong> ${result.risk}</p>
+                        <p><strong>URL:</strong> ${result.url}</p>
+                        <p><strong>Parameter:</strong> ${result.parameter}</p>
+                        <p><strong>Evidence:</strong> ${result.evidence}</p>
+                        <p><strong>CWE ID:</strong> ${result.cwe_id}</p>
+                        <p><strong>CWE Description:</strong> ${result.cwe_description}</p>
+                        <p><strong>Scan Time:</strong> ${result.scan_time}</p>
+                    `;
+                    resultsContainer.appendChild(resultDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('results').innerText = 'An error occurred while fetching results';
+            });
+        });
+    </script>
+</body>
+</html>
+
