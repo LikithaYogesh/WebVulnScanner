@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SiteSecure</title>
+
+  <!-- slider stylesheet -->
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              SiteSecure
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="scan.html"> scan </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="do.html"> What we do </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+  <div class="container">
+    <h1>Website Vulnerability Scanner and Tracker</h1>
+    <form id="scanForm">
+        <label for="urlInput">Target URL:</label>
+        <input type="text" id="urlInput" name="urlInput" required>
+        <button type="submit">Scan</button>
+    </form>
+    <div id="result"></div>
+    <button id="fetchResults">Fetch Results</button>
+    <div id="results"></div>
+</div>
+
+<script>
+    document.getElementById('scanForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const targetUrl = document.getElementById('urlInput').value;
+        const backendUrl = 'http://192.168.1.116:5000/api/scan';  // Update to match your backend URL
+
+        fetch(backendUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ target_url: targetUrl })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                document.getElementById('result').innerText = 'Scan completed successfully';
+            } else if (data.error) {
+                document.getElementById('result').innerText = `Error: ${data.error}`;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('result').innerText = 'An error occurred';
+        });
+    });
+
+    document.getElementById('fetchResults').addEventListener('click', function() {
+        const resultsUrl = 'http://192.168.1.116:5000/api/results';  // Update to match your backend URL
+
+        fetch(resultsUrl)
+        .then(response => response.json())
+        .then(data => {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';  // Clear previous results
+
+            data.forEach(result => {
+                const resultDiv = document.createElement('div');
+                resultDiv.innerHTML = `
+                    <h3>${result.alert}</h3>
+                    <p><strong>Solution:</strong> ${result.solution}</p>
+                    <p><strong>Risk:</strong> ${result.risk}</p>
+                    <p><strong>URL:</strong> ${result.url}</p>
+                    <p><strong>Parameter:</strong> ${result.parameter}</p>
+                    <p><strong>Evidence:</strong> ${result.evidence}</p>
+                    <p><strong>CWE ID:</strong> ${result.cwe_id}</p>
+                    <p><strong>CWE Description:</strong> ${result.cwe_description}</p>
+                    <p><strong>Scan Time:</strong> ${result.scan_time}</p>
+                `;
+                resultsContainer.appendChild(resultDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('results').innerText = 'An error occurred while fetching results';
+        });
+    });
+</script>
+
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; All Rights Reserved By
+      <a>Team HACTIVATORS</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- owl carousel script 
+    -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>
