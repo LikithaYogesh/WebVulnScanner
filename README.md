@@ -1,4 +1,4 @@
-# Site Secure: Advanced Website Vulnerability Scanner
+# Advanced Website Vulnerability Scanner
 
 Site Secure is a robust, automated vulnerability scanner designed to identify security flaws in web applications. By augmenting the capabilities of OWASP ZAP with custom scripts, dashboards, and a full-stack reporting interface, this tool empowers developers and security teams to proactively assess and harden their web applications against the OWASP Top 10 vulnerabilities and beyond.
 
