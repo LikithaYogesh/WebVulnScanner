@@ -1,17 +1,18 @@
 # Site Secure: Advanced Website Vulnerability Scanner
 
-Site Secure is an automated tool designed to identify security weaknesses in web applications. By enhancing OWASP ZAP's scanning capabilities with custom scripts and configurations, this scanner offers a comprehensive solution for safeguarding your websites against vulnerabilities.
+Site Secure is a robust, automated vulnerability scanner designed to identify security flaws in web applications. By augmenting the capabilities of OWASP ZAP with custom scripts, dashboards, and a full-stack reporting interface, this tool empowers developers and security teams to proactively assess and harden their web applications against the OWASP Top 10 vulnerabilities and beyond.
 
 ---
 
 ## Features
 
-- **Automated Vulnerability Detection:** Streamlined scanning process to identify common security flaws.
-- **Custom Scripts and Configurations:** Tailored scripts for deeper and more specific vulnerability assessments.
-- **Enhanced OWASP ZAP Integration:** Combines the powerful ZAP framework with advanced customizations.
-- **User-Friendly Interface:** Easy to configure and execute scans with detailed reporting.
-- **Support for OWASP Top 10 Vulnerabilities:** Focused analysis on the most critical web application vulnerabilities.
-- **Exportable Reports:** Generate detailed scan results in HTML, JSON, or CSV format.
+- **Automated Vulnerability Detection:** Detects a wide range of security flaws using OWASP ZAP spidering and active scanning.
+- **Custom Scripts and Configurations:** Enhances ZAP scans with custom rules, tailored scripts, and configurable depth/scope.
+- **OWASP Top 10 Focused:** Designed to specifically uncover the most critical web application security risks.
+- **Interactive Web Dashboard:** Displays scan results, CWE links, and risk-level breakdowns with integrated graphs.
+- **Detailed Reporting:** Includes Flask-based API to manage scans and results programmatically.
+- **Modular Backend API:** Generate detailed scan results in HTML, JSON, or CSV format.
+- **CWE Mapping:** Includes automatic mapping of vulnerabilities to CWE descriptions for educational and compliance reporting.
 
 ---
 
@@ -86,6 +87,17 @@ We welcome contributions to improve Site Secure. To contribute:
        git commit -m "Add new feature"
 
 4. Push your branch and create a pull request.
+
+---
+
+## Visualizations
+The backend supports risk-based analysis through:
+
+- **chart.py:** pie chart of risk severity across all scans
+
+- **chartsite.py:** pie chart filtered by domain
+
+These use matplotlib and run from the terminal.
 
 ---
 
